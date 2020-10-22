@@ -1,0 +1,65 @@
+{
+  "v": 1,
+  "id": "a8ee6688-9e4e-4134-b3d8-d1ccba2debfc",
+  "rev": 1,
+  "name": "Default UDP Input",
+  "summary": "Default UDP Input",
+  "description": "Enables default Gelf UDP Input on port 12201. ",
+  "vendor": "Marco Conti <github@marcoconti.org>",
+  "url": "https://github.com/mrccnt/graylog-default-gelf-udp",
+  "parameters": [],
+  "entities": [
+    {
+      "v": "1",
+      "type": {
+        "name": "input",
+        "version": "1"
+      },
+      "id": "c7f5b4b2-bcbf-4d25-809e-f9962a3c274d",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "Default UDP Input"
+        },
+        "configuration": {
+          "recv_buffer_size": {
+            "@type": "integer",
+            "@value": 262144
+          },
+          "port": {
+            "@type": "integer",
+            "@value": 12201
+          },
+          "number_worker_threads": {
+            "@type": "integer",
+            "@value": 8
+          },
+          "bind_address": {
+            "@type": "string",
+            "@value": "0.0.0.0"
+          },
+          "decompress_size_limit": {
+            "@type": "integer",
+            "@value": 8388608
+          }
+        },
+        "static_fields": {},
+        "type": {
+          "@type": "string",
+          "@value": "org.graylog2.inputs.gelf.udp.GELFUDPInput"
+        },
+        "global": {
+          "@type": "boolean",
+          "@value": true
+        },
+        "extractors": []
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=3.3.8+e223f85"
+        }
+      ]
+    }
+  ]
+}
